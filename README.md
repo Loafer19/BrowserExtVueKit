@@ -1,21 +1,35 @@
-# VueBrowserTemplate
+# Vue Browser Template
 
-This template should help get you started developing ...
+This template should help get you started developing good browser extension with vue
 
 ## Project Setup
+
+Install dependencies:
 
 ```sh
 bun i
 ```
 
-### Compile and Hot-Reload for Development
+Fill up `.env`
+
+U good to go 💗
+
+### Commands
+
+Run and observe a beauty
 
 ```sh
 bun dev
 ```
 
-### Compile and Minify for Production
+Be ready to upload your extension
 
 ```sh
 bun run build
+```
+
+Improve code quality
+
+```sh
+bun run check
 ```

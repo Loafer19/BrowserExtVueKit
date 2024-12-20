@@ -1,7 +1,4 @@
-import js from '@eslint/js'
-
 export default [
-  js.configs.recommended,
   {
     rules: {
       'brace-style': [
@@ -53,13 +50,15 @@ export default [
         'error',
         'never'
       ],
-      'sort-imports': ['error', {
-        'ignoreCase': false,
-        'ignoreDeclarationSort': false,
-        'ignoreMemberSort': false,
-        'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'],
-        'allowSeparatedGroups': false
-      }],
+      'sort-imports': [
+        'error', {
+          'ignoreCase': false,
+          'ignoreDeclarationSort': false,
+          'ignoreMemberSort': false,
+          'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'],
+          'allowSeparatedGroups': false
+        }
+      ],
       'space-before-blocks': [
         'error',
         'always'

@@ -1,0 +1,20 @@
+{
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "service_worker": "src/background.js"
+  },
+  "icons": {
+    "128": "icons/logo.png",
+    "48": "icons/logo.png"
+  },
+  "manifest_version": 3,
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "src/options.html"
+  }
+}

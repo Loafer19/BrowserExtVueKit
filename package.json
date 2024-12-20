@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "pinia": "^2.2.6",
+    "vite-plugin-web-extension": "^4.3.1",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
+  "description": "Simple vue template for browser extensions",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -19,8 +21,8 @@
   "scripts": {
     "build": "vite build",
     "check": "eslint --fix",
-    "dev": "vite --open"
+    "dev": "vite"
   },
   "type": "module",
-  "version": "0.0.2"
+  "version": "0.1.0"
 }
