@@ -12,17 +12,13 @@
     "eslint": "^9.17.0",
     "vite": "^6.0.1"
   },
-  "module": "index.ts",
+  "module": "srs/main.js",
   "name": "vue-browser-template",
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "private": true,
   "scripts": {
     "build": "vite build",
     "check": "eslint --fix",
     "dev": "vite"
   },
   "type": "module",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
