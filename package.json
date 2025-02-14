@@ -1,24 +1,21 @@
 {
   "dependencies": {
-    "pinia": "^2.2.6",
-    "vite-plugin-web-extension": "^4.3.1",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
-  "description": "Simple vue template for browser extensions",
+  "description": "Vue template for browser extensions",
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "eslint": "^9.17.0",
-    "vite": "^6.0.1"
+    "vite": "^6.0.1",
+    "vite-plugin-web-extension": "^4.3.1"
   },
-  "module": "srs/main.js",
-  "name": "vue-browser-template",
+  "name": "browser-ext-vue-kit",
   "scripts": {
     "build": "vite build",
     "check": "eslint --fix",
     "dev": "vite"
   },
   "type": "module",
-  "version": "0.1.1"
+  "version": "0.2.0"
 }

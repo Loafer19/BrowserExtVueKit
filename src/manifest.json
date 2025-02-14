@@ -1,12 +1,12 @@
 {
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "src/pop-up/index.html"
   },
   "background": {
     "scripts": [
-      "src/background.js"
+      "src/background/main.js"
     ],
-    "service_worker": "src/background.js"
+    "service_worker": "src/background/main.js"
   },
   "icons": {
     "128": "icons/logo.png",
@@ -15,6 +15,9 @@
   "manifest_version": 3,
   "options_ui": {
     "open_in_tab": true,
-    "page": "src/options.html"
-  }
+    "page": "src/pop-up/index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
 }

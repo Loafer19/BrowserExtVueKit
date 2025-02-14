@@ -1,14 +1,11 @@
 body {
+  width: 420px;
+  height: calc(600px - 4rem);
   margin: 0;
+  padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-}
-
-#app {
-  width: 450px;
-  height: 500px;
-  padding: 1rem;
-  background: #414141;
+  font-weight: 600;
+  background: lightgray;
 }
 
 header nav {
@@ -18,14 +15,16 @@ header nav {
 
 header nav a {
   padding: 0.8rem 1.4rem;
-  background: gray;
+  background: #333;
   border-radius: 1rem;
   font-size: 2rem;
-  color: white;
+  color: lightgray;
   text-decoration: none;
 }
 
 header nav a:hover,
 .router-link-active {
-  box-shadow: 5px 5px;
+  background: #666;
+  color: black;
+  box-shadow: 5px 5px 10px #666
 }
