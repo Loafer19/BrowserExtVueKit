@@ -9,15 +9,22 @@
     "service_worker": "src/background/main.js"
   },
   "icons": {
-    "128": "icons/logo.png",
-    "48": "icons/logo.png"
+    "128": "logo.png",
+    "48": "logo.png"
   },
   "manifest_version": 3,
+  "oauth2": {
+    "client_id": ".env.example",
+    "scopes": [
+      "email"
+    ]
+  },
   "options_ui": {
     "open_in_tab": true,
     "page": "src/pop-up/index.html"
   },
   "permissions": [
+    "identity",
     "storage"
   ]
 }

@@ -2,9 +2,23 @@
 
 This template will help you get started developing a browser extension with Vue
 
-![logo](./public/icons/logo.png)
+![logo](./public/logo.png)
 
 ## Features
+
+- vue router
+- auth pages
+- google identity
+- neat file structure
+- state and fetcher
+- tailwindcss
+
+### UI Components
+
+[Merakiui](https://merakiui.com)
+
+![home](./.github/screenshots/home.jpg)
+![login](./.github/screenshots/login.jpg)
 
 ## Project Setup
 

@@ -1,11 +1,14 @@
 import { defineConfig, loadEnv } from 'vite'
 import webExtension, { readJsonFile } from 'vite-plugin-web-extension'
 import { resolve } from 'path'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 
 function generateManifest() {
   const manifest = readJsonFile('src/manifest.json')
   const pkg = readJsonFile('package.json')
+
+  manifest.oauth2.client_id = process.env.VITE_GOOGLE_OAUTH_CLIENT_ID
 
   return {
     name: pkg.name,
@@ -26,6 +29,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
+      tailwindcss(),
       webExtension({
         manifest: generateManifest,
         webExtConfig: {
