@@ -3,6 +3,7 @@ import state from '@/services/state'
 
 class fetcher {
   axios
+
   response
 
   constructor() {

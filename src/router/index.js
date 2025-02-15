@@ -1,7 +1,7 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 import Home from '@/pages/Home.vue'
-import { inject } from 'vue'
 import Template from '@/pages/_Template.vue'
+import { inject } from 'vue'
 
 const router = createRouter({
   history: createMemoryHistory(),
@@ -26,7 +26,7 @@ const router = createRouter({
           component: () => import('@/pages/About.vue'),
           meta: {
             needAuth: true
-          },
+          }
         }
       ]
     },
