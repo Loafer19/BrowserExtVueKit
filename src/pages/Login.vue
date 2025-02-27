@@ -1,7 +1,7 @@
 <script setup>
-import { reactive, inject } from 'vue'
+import { inject, reactive } from 'vue'
 
-const state = inject('state');
+const state = inject('state')
 
 const form = reactive({
   email: null,
@@ -9,11 +9,9 @@ const form = reactive({
 })
 
 const login = () => {
-  state.fetcher
-    .post('/login', form)
-    .then((response) => {
-      state.handleAuth(response.getData());
-    })
+  state.fetcher.post('/login', form).then((response) => {
+    state.handleAuth(response.getData())
+  })
 }
 
 const google = () => {
@@ -26,7 +24,7 @@ const google = () => {
     <div class="m-6">
       <div class="flex justify-center items-center mx-auto">
         <img class="w-auto h-11 mr-4" src="/logo.png">
-        <span class="align-middle font-bold text-white text-xl">Vue Kit</span>
+        <span class="align-middle text-xl text-gray-800 dark:text-white font-bold">Vue Kit</span>
       </div>
 
       <form class="mt-6" @submit.prevent="login" @keyup.enter="login">

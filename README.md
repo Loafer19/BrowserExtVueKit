@@ -1,8 +1,8 @@
 # Browser Extension Vue Kit
 
-This template will help you get started developing a browser extension with Vue
-
 ![logo](./public/logo.png)
+
+This template will help you get started developing a browser extension with Vue
 
 ## Features
 

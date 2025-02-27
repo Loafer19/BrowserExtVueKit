@@ -1,30 +1,23 @@
 {
-  "action": {
-    "default_popup": "src/pop-up/index.html"
-  },
-  "background": {
-    "scripts": [
-      "src/background/main.js"
-    ],
-    "service_worker": "src/background/main.js"
-  },
-  "icons": {
-    "128": "logo.png",
-    "48": "logo.png"
-  },
-  "manifest_version": 3,
-  "oauth2": {
-    "client_id": ".env.example",
-    "scopes": [
-      "email"
-    ]
-  },
-  "options_ui": {
-    "open_in_tab": true,
-    "page": "src/pop-up/index.html"
-  },
-  "permissions": [
-    "identity",
-    "storage"
-  ]
+    "action": {
+        "default_popup": "src/pop-up/index.html"
+    },
+    "background": {
+        "scripts": ["src/background/main.js"],
+        "service_worker": "src/background/main.js"
+    },
+    "icons": {
+        "128": "logo.png",
+        "48": "logo.png"
+    },
+    "manifest_version": 3,
+    "oauth2": {
+        "client_id": ".env.example",
+        "scopes": ["email"]
+    },
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "src/pop-up/index.html"
+    },
+    "permissions": ["identity", "storage"]
 }
