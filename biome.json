@@ -1,14 +1,6 @@
 {
-    "css": {
-        "formatter": {
-            "enabled": true
-        },
-        "linter": {
-            "enabled": true
-        }
-    },
     "files": {
-        "ignore": ["dist"]
+        "includes": ["**", "!**/dist"]
     },
     "formatter": {
         "enabled": true,
@@ -19,6 +11,19 @@
         "formatter": {
             "quoteStyle": "single",
             "semicolons": "asNeeded"
+        }
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "complexity": {
+                "noImportantStyles": "off"
+            },
+            "correctness": {
+                "noUnusedFunctionParameters": "off",
+                "noUnusedImports": "off",
+                "noUnusedVariables": "off"
+            }
         }
     }
 }

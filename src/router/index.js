@@ -1,7 +1,7 @@
-import Home from '@/pages/Home.vue'
-import Template from '@/pages/_Template.vue'
 import { inject } from 'vue'
 import { createMemoryHistory, createRouter } from 'vue-router'
+import Template from '@/pages/_Template.vue'
+import Home from '@/pages/Home.vue'
 
 const router = createRouter({
     history: createMemoryHistory(),

@@ -1,5 +1,5 @@
-import state from '@/services/state'
 import axios from 'axios'
+import state from '@/services/state'
 
 class fetcher {
     axios

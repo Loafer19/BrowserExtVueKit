@@ -1,6 +1,6 @@
-import fetcher from '@/services/fetcher'
 import { createToaster } from '@meforma/vue-toaster'
 import { reactive } from 'vue'
+import fetcher from '@/services/fetcher'
 
 const state = reactive({
     fetcher: fetcher,

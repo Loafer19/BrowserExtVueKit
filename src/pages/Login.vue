@@ -4,18 +4,18 @@ import { inject, reactive } from 'vue'
 const state = inject('state')
 
 const form = reactive({
-  email: null,
-  password: null,
+    email: null,
+    password: null,
 })
 
 const login = () => {
-  state.fetcher.post('/login', form).then((response) => {
-    state.handleAuth(response.getData())
-  })
+    state.fetcher.post('/login', form).then((response) => {
+        state.handleAuth(response.getData())
+    })
 }
 
 const google = () => {
-  state.googleAuth()
+    state.googleAuth()
 }
 </script>
 
