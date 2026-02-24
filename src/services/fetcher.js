@@ -1,10 +1,11 @@
 import axios from 'axios'
-import state from '@/services/state'
 
 class fetcher {
     axios
 
     response
+
+    _errorHandler = null
 
     constructor() {
         this.axios = axios.create({
@@ -19,7 +20,7 @@ class fetcher {
     async get(endpoint, data) {
         this.response = await this.axios
             .get(endpoint, { params: data })
-            .catch(this.errorMessage)
+            .catch((e) => this.errorMessage(e))
 
         return this
     }
@@ -27,7 +28,7 @@ class fetcher {
     async post(endpoint, data) {
         this.response = await this.axios
             .post(endpoint, data)
-            .catch(this.errorMessage)
+            .catch((e) => this.errorMessage(e))
 
         return this
     }
@@ -35,7 +36,7 @@ class fetcher {
     async patch(endpoint, data) {
         this.response = await this.axios
             .patch(endpoint, data)
-            .catch(this.errorMessage)
+            .catch((e) => this.errorMessage(e))
 
         return this
     }
@@ -43,7 +44,7 @@ class fetcher {
     async delete(endpoint, data) {
         this.response = await this.axios
             .delete(endpoint, data)
-            .catch(this.errorMessage)
+            .catch((e) => this.errorMessage(e))
 
         return this
     }
@@ -54,12 +55,18 @@ class fetcher {
         return this
     }
 
+    setErrorHandler(handler) {
+        this._errorHandler = handler
+
+        return this
+    }
+
     getData() {
         return this.response.data
     }
 
     errorMessage(error) {
-        state.toaster.error(error.response?.data?.message ?? error.message)
+        this._errorHandler?.(error.response?.data?.message ?? error.message)
     }
 
     isOk() {
