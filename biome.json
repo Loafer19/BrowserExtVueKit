@@ -21,7 +21,7 @@
             },
             "correctness": {
                 "noUnusedFunctionParameters": "off",
-                "noUnusedImports": "off",
+                "noUnusedImports": "warn",
                 "noUnusedVariables": "off"
             }
         }

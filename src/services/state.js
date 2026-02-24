@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import fetcher from '@/services/fetcher'
 
 const state = reactive({
-    fetcher: fetcher,
+    fetcher,
     toaster: createToaster({ position: 'bottom', duration: 1500 }),
 
     token: null,
@@ -50,5 +50,7 @@ const state = reactive({
 })
 
 chrome.storage.local.get(['token', 'user'], state.handleAuth)
+
+fetcher.setErrorHandler((msg) => state.toaster.error(msg))
 
 export default state

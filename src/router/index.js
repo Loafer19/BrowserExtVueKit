@@ -1,7 +1,7 @@
-import { inject } from 'vue'
 import { createMemoryHistory, createRouter } from 'vue-router'
 import Template from '@/pages/_Template.vue'
 import Home from '@/pages/Home.vue'
+import state from '@/services/state'
 
 const router = createRouter({
     history: createMemoryHistory(),
@@ -44,8 +44,6 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
-    const state = inject('state')
-
     if (to.meta.needAuth && !state.token) {
         return next({ name: 'login' })
     }
